@@ -68,21 +68,4 @@ pipeline {
         }
       }
     }
-    stage('Test Merge') {
-      parallel {
-        stage('Database Merge Test ') {
-          steps {
-            echo 'Test DB'
-          }
-        }
-        stage('Test Source Merge ') {
-          steps {
-            echo 'Test Build'
-          }
-        }
-      }
-    }
   }
-}
-
-
