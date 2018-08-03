@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Setup Phase ') {
       steps {
-        echo 'Merge Request Hook Firedd'
+        echo 'Merge Request Hook Actuated'
       }
     }
     stage('Static Analysis') {
