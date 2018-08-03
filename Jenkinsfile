@@ -18,7 +18,7 @@ pipeline {
             echo 'Envoking JSLint'
           }
         }
-        stage('Python') {
+        stage('Python Pylint') {
           steps {
             echo 'Running PyLint'
           }
