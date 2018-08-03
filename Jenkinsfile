@@ -54,10 +54,18 @@ pipeline {
         }
       }
     }
-    stage('Candidate ') {
-      steps {
-        echo 'Merge to Candidate Build'
-      }
-    }
+    stage ('Merge'
+           parallel {
+             stage('Candate DB Merge ') {
+               steps {
+                 echo 'Merge and Test DB'
+                 }
+              }
+             stage('Candidate Merge ') {
+               steps {
+                 echo 'Merge and Test Build'
+                }
+            }
+        }     
   }
 }
