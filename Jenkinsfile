@@ -93,6 +93,11 @@ pipeline {
             echo 'Run-Generic'
           }
         }
+     stage('Acceptance Test Dev  ') {
+          steps {
+            echo 'UI Accptance'
+          }
+        }  
       }
 }
  
