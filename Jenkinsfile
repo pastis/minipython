@@ -5,6 +5,7 @@ pipeline {
       steps {
         echo 'Merge Request Hook Fired'
       }
+    }
     stage('Static Analysis') {
       parallel {
         stage('CHANGELOG') {
