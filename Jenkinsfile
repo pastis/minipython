@@ -1,6 +1,10 @@
 pipeline {
   agent any
   stages {
+    stage('Setup Phase ') {
+      steps {
+        echo 'Merge Request Hook Fired'
+      }
     stage('Static Analysis') {
       parallel {
         stage('CHANGELOG') {
