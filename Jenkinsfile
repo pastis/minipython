@@ -82,5 +82,17 @@ pipeline {
         }
       }
     }
+     stage('Make RPM') {
+       steps {
+            echo 'Create RPM'
+          }
+        }
+     stage('Deploy RPM to Dev  ') {
+          steps {
+            echo 'Run-Generic'
+          }
+        }
+      }
+    }
   }
 }
