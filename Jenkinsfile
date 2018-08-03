@@ -54,19 +54,19 @@ pipeline {
         }
       }
     }
-    stage ('Merge Request') { 
-           parallel {
-             stage('Candate DB Merge ') {
-               steps {
-                 echo 'Merge and Test DB'
-                 }
-              }
-             stage('Candidate Merge ') {
-               steps {
-                 echo 'Merge and Test Build'
-                }
-            }
-        }     
+    stage('Merge Request') {
+      parallel {
+        stage('Candate Database Merge ') {
+          steps {
+            echo 'Merge and Test DB'
+          }
+        }
+        stage('Candidate Source Merge ') {
+          steps {
+            echo 'Merge and Test Build'
+          }
+        }
+      }
+    }
   }
-}
 }
