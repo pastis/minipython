@@ -58,12 +58,25 @@ pipeline {
       parallel {
         stage('Candate Database Merge ') {
           steps {
-            echo 'Merge and Test DB'
+            echo 'Merge DB'
           }
         }
         stage('Candidate Source Merge ') {
           steps {
-            echo 'Merge and Test Build'
+            echo 'Merge Build'
+          }
+        }
+      }
+      stage('Test Merge') {
+      parallel {
+        stage('Database Merge Test ') {
+          steps {
+            echo 'Test DB'
+          }
+        }
+        stage('Test Source Merge ') {
+          steps {
+            echo 'Test Build'
           }
         }
       }
