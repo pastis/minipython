@@ -54,7 +54,7 @@ pipeline {
         }
       }
     }
-    stage ('Merge'
+    stage ('Merge Request') { 
            parallel {
              stage('Candate DB Merge ') {
                steps {
