@@ -89,9 +89,17 @@ pipeline {
         }
      stage('Deploy RPM to Dev  ') {
           steps {
+            approve()
             echo 'Run-Generic'
           }
         }
       }
 }
  
+def approve() {
+
+	timeout(time:1, unit:'DAYS') {
+		input('Do you want to deploy to live?')
+	}
+
+}
