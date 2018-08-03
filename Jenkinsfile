@@ -67,6 +67,7 @@ pipeline {
           }
         }
       }
+    }
     stage('Test Merge') {
       parallel {
         stage('Database Merge Test ') {
@@ -83,5 +84,5 @@ pipeline {
     }
   }
 }
-}
+
 
