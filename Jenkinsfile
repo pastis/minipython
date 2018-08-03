@@ -66,7 +66,6 @@ pipeline {
             echo 'Merge Build'
           }
         }
-      }
       stage('Test Merge') {
       parallel {
         stage('Database Merge Test ') {
@@ -82,5 +81,6 @@ pipeline {
       }
     }
   }
+}
 }
 }
